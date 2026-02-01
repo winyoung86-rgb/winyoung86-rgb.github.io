@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initNavHighlight();
     initContactForm();
+    // [1.1] Hero enhancements
+    initHeroGlow();
+    // [1.2] Nav enhancements
+    initNavScroll();
+    // [1.3] Card enhancements
+    initMagneticButtons();
 });
 
 /**
@@ -197,14 +203,17 @@ function initNavHighlight() {
 
     sections.forEach(section => observer.observe(section));
 
-    // Add active style
+    // Add active style - [1.2] Updated to pill indicator
     const style = document.createElement('style');
     style.textContent = `
         .nav-link.active {
-            color: var(--primary);
+            color: var(--dark);
+            background: var(--primary);
+            padding: 0.25rem 0.75rem;
+            margin: -0.25rem -0.75rem;
         }
         .nav-link.active::after {
-            width: 100%;
+            display: none;
         }
     `;
     document.head.appendChild(style);
@@ -246,6 +255,64 @@ function initContactForm() {
             submitBtn.style.background = '';
             submitBtn.style.color = '';
         }, 3000);
+    });
+}
+
+/**
+ * [1.1] Mouse-follow Glow Effect
+ */
+function initHeroGlow() {
+    const wrapper = document.querySelector('.hero-image-wrapper');
+    const glow = document.querySelector('.hero-glow');
+
+    if (!wrapper || !glow) return;
+
+    wrapper.addEventListener('mousemove', (e) => {
+        const rect = wrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        glow.style.left = x + 'px';
+        glow.style.top = y + 'px';
+    });
+}
+
+/**
+ * [1.2] Nav Scroll Effects - backdrop blur + shrink
+ */
+function initNavScroll() {
+    const nav = document.querySelector('.nav');
+
+    if (!nav) return;
+
+    // Scroll detection for blur + shrink
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+}
+
+/**
+ * [1.3] Magnetic Button Effect
+ */
+function initMagneticButtons() {
+    const magneticElements = document.querySelectorAll('.submit-btn, .social-link');
+
+    magneticElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = 'translate(0, 0)';
+        });
     });
 }
 
