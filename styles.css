@@ -877,6 +877,14 @@ img {
     filter: grayscale(0%);
 }
 
+.skill-icon img.dark-logo {
+    filter: invert(60%) sepia(30%) hue-rotate(110deg) saturate(200%) brightness(0.85);
+}
+
+.skill-card:hover .skill-icon img.dark-logo {
+    filter: none;
+}
+
 .skill-name {
     display: block;
     font-size: 0.875rem;
