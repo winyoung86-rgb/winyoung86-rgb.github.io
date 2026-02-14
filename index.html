@@ -16,6 +16,11 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- FOUC prevention: apply theme before paint -->
+    <script>
+    (function(){var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
+    </script>
 </head>
 <body>
     <a href="#about" class="skip-link">Skip to content</a>
@@ -33,6 +38,17 @@
                 <a href="#insights" class="nav-link">insights</a>
                 <a href="#contact" class="nav-link">contact</a>
             </div>
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                role="switch"
+                aria-checked="false"
+                aria-label="Toggle dark mode"
+            >
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <i class="fas fa-sun" aria-hidden="true"></i>
+            </button>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
