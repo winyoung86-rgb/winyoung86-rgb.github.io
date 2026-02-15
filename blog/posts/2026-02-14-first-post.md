@@ -4,6 +4,7 @@ title: Why I'm Starting This Blog
 date: 2026-02-14
 description: A quick intro and why I decided to start sharing what I'm learning about AI, automation, and digital strategy.
 tags: posts
+icon: fa-rocket
 ---
 
 <a href="/blog/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--mid); text-decoration: none; margin-bottom: 2rem; font-weight: 600; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--mid)'">

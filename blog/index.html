@@ -11,7 +11,12 @@ description: Thoughts on automation, AI, and digital transformation
 
 <div class="post-list">
   {% for post in collections.posts %}
-    <article class="post-card">
+    <article class="post-card" style="position: relative;">
+      {% if post.data.icon %}
+      <div style="position: absolute; right: 1.5rem; top: 1.5rem; width: 48px; height: 48px; background: var(--primary); border: var(--border); box-shadow: var(--shadow-hard); display: flex; align-items: center; justify-content: center;">
+        <i class="fas {{ post.data.icon }}" style="font-size: 1.5rem; color: var(--light);"></i>
+      </div>
+      {% endif %}
       <h2 class="post-title">{{ post.data.title }}</h2>
       <div class="post-meta">
         <time class="post-date">{{ post.data.date | dateDisplay }}</time>
