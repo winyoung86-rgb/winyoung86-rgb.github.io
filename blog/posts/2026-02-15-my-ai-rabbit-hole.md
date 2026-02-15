@@ -10,8 +10,11 @@ tags: posts
   <i class="fas fa-arrow-left"></i> Back to Blog
 </a>
 
-<div class="post-header">
+<div class="post-header" style="position: relative;">
   <h1 class="blog-title">{{ title }}</h1>
+  <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 56px; height: 56px; background: var(--primary); border: var(--border); box-shadow: var(--shadow-hard); display: flex; align-items: center; justify-content: center;">
+    <i class="fas fa-brain" style="font-size: 1.75rem; color: var(--light);"></i>
+  </div>
   <div class="post-meta">
     <time class="post-date">{{ date | dateDisplay }}</time>
   </div>
