@@ -19,7 +19,7 @@
 
     <!-- FOUC prevention: apply theme before paint -->
     <script>
-    (function(){var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
+    (function(){var t=localStorage.getItem('theme');if(!t)t='dark';if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
     </script>
 </head>
 <body>
@@ -36,6 +36,7 @@
                 <a href="#skills" class="nav-link">skills</a>
                 <a href="#resume" class="nav-link">resume</a>
                 <a href="#insights" class="nav-link">insights</a>
+                <a href="/blog/" class="nav-link">blog</a>
                 <a href="#contact" class="nav-link">contact</a>
             </div>
             <button
@@ -424,7 +425,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="GitHub-logo.png" alt="GitHub" class="dark-logo" style="width: 104px; height: 104px;">
+                        <img src="github-logo.png" alt="GitHub" class="dark-logo" style="width: 104px; height: 104px;">
                     </div>
                     <span class="skill-name">GitHub</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
