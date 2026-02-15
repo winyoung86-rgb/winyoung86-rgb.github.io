@@ -19,6 +19,8 @@ tags: posts
 
 <div class="post-content">
 
+## How It Started
+
 **What led me down this AI rabbit hole**
 
 Five months ago, my tech stack was Google Sheets, Apps Script, and an OpenAI API key. Now I'm building full backend systems with custom websites, automated workflows, and AI wired into everything. Here's how that happened.
@@ -27,15 +29,23 @@ In August 2025, the digital team at Oz Marketing was struggling. Lots of turnove
 
 I was asked to step in and help. Our execs knew I've always been passionate about digital marketing and tech savvy — that's where my career started.
 
+## The First Automation
+
 Over the next several weeks, I recognized the small team just couldn't keep up. So I started turning toward AI for solutions. I'd always been interested but hadn't really used it to its full potential. One weekend I did a deep dive — what could I actually build with it? That led to my first automated workflow: the OEM Offers Automation. It takes thousands of regional OEM model offers for 15+ manufacturers and produces Google Ads RSA headlines written by AI.
 
 When it actually worked, I just sat there staring at it. I built something that did in minutes what used to take hours. That was the moment I knew I was going all in.
 
+## From Spreadsheets to Full-Stack
+
 Once I had that working, I committed full-time to learning everything I could about AI, automation, and the technology behind it all.
 
-Five months later, that OEM offers system feels quaint and honestly not built very well. But it worked. A Google Apps Script pulled a CSV into a Google Sheet, then AI read the offers and produced them in Google Ads format. Google Sheets, Apps Script, OpenAI — that was the whole stack.
+Five months later, that OEM offers system feels quaint and honestly not built very well. But it worked. A Google Apps Script pulled a CSV into a Google Sheet, then AI read the offers and produced them in Google Ads format. Google Sheets, Apps Script, [OpenAI](https://openai.com) — that was the whole stack.
 
-Now I'm building automated workflows triggered by custom websites — solid front-end design, full backend systems with n8n, Claude Code, Supabase, Google Cloud Console, parts hosted on my VPS. A long way from a spreadsheet and an API key. Late nights, videos, tutorials, certification courses — this has been my rabbit hole. Maybe in another five months I'll look back at what I'm building now and think it's quaint too. But the tools I'm using and the things I'm creating are miles from where I started. And I'm still excited every day to wake up and see what's next — I've got some things in the works that I can't wait to share.
+Now I'm building automated workflows triggered by custom websites — solid front-end design, full backend systems with [n8n](https://n8n.io), [Claude Code](https://claude.ai/code), [Supabase](https://supabase.com), Google Cloud Console, parts hosted on my VPS. A long way from a spreadsheet and an API key. Late nights, videos, tutorials, certification courses — this has been my rabbit hole.
+
+## What's Next
+
+Maybe in another five months I'll look back at what I'm building now and think it's quaint too. But the tools I'm using and the things I'm creating are miles from where I started. And I'm still excited every day to wake up and see what's next — I've got some things in the works that I can't wait to share.
 
 <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--mid); text-align: right; font-style: italic; color: var(--mid);">
 — Winslow Young

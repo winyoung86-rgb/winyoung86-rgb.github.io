@@ -3,6 +3,20 @@
  * Animations, interactions, and functionality
  */
 
+/**
+ * Throttle utility - limits function execution to once per interval
+ */
+function throttle(fn, ms) {
+  let last = 0;
+  return function (...args) {
+    const now = Date.now();
+    if (now - last >= ms) {
+      last = now;
+      fn.apply(this, args);
+    }
+  };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize all modules
   initMobileMenu();
@@ -273,14 +287,17 @@ function initHeroGlow() {
 
   if (!wrapper || !glow) return;
 
-  wrapper.addEventListener("mousemove", (e) => {
-    const rect = wrapper.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  wrapper.addEventListener(
+    "mousemove",
+    throttle((e) => {
+      const rect = wrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
-    glow.style.left = x + "px";
-    glow.style.top = y + "px";
-  });
+      glow.style.left = x + "px";
+      glow.style.top = y + "px";
+    }, 16),
+  );
 }
 
 /**
@@ -292,13 +309,16 @@ function initNavScroll() {
   if (!nav) return;
 
   // Scroll detection for blur + shrink
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
+  window.addEventListener(
+    "scroll",
+    throttle(() => {
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    }, 16),
+  );
 }
 
 /**
@@ -436,15 +456,18 @@ function initParallax() {
 
   if (!heroLayers.length) return;
 
-  window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * 0.3;
+  window.addEventListener(
+    "scroll",
+    throttle(() => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * 0.3;
 
-    heroLayers.forEach((layer, index) => {
-      const direction = index % 2 === 0 ? 1 : -1;
-      layer.style.transform = `translateY(${rate * direction * 0.5}px)`;
-    });
-  });
+      heroLayers.forEach((layer, index) => {
+        const direction = index % 2 === 0 ? 1 : -1;
+        layer.style.transform = `translateY(${rate * direction * 0.5}px)`;
+      });
+    }, 16),
+  );
 }
 
 // Initialize parallax on load

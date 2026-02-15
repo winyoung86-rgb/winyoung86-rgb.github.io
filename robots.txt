@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Sitemap: https://winslowyoung.com/sitemap.xml

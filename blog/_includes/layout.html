@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Winslow Young</title>
     <meta name="description" content="{{ description or 'Thoughts on automation, AI, and digital transformation.' }}">
+    <link rel="canonical" href="https://winslowyoung.com{{ page.url }}">
+    <meta property="og:title" content="{{ title }} - Winslow Young">
+    <meta property="og:description" content="{{ description or 'Thoughts on automation, AI, and digital transformation.' }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://winslowyoung.com{{ page.url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }} - Winslow Young">
+    <meta name="twitter:description" content="{{ description or 'Thoughts on automation, AI, and digital transformation.' }}">
 
     <!-- Monospace Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -466,6 +474,53 @@
     <script>
     (function(){var t=localStorage.getItem('theme');if(!t)t='dark';if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ title }}",
+        "description": "{{ description or 'Thoughts on automation, AI, and digital transformation.' }}",
+        "datePublished": "{{ date | dateDisplay }}",
+        "author": {
+            "@type": "Person",
+            "name": "Winslow Young",
+            "url": "https://winslowyoung.com"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Winslow Young"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://winslowyoung.com{{ page.url }}"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://winslowyoung.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://winslowyoung.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{ title }}"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -514,6 +569,16 @@
 
     <main class="blog-container">
         {{ content }}
+        <div style="margin-top: 4rem; padding: 2rem; border: 3px solid var(--dark); box-shadow: 4px 4px 0px var(--dark); background: var(--section-alt-bg);">
+            <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                <div style="flex-shrink: 0; width: 60px; height: 60px; border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; color: var(--primary);">[WY]</div>
+                <div>
+                    <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem;">Winslow Young</h3>
+                    <p style="font-size: 0.875rem; color: var(--mid); margin-bottom: 0.75rem;">Director of AI & Digital Strategy at Young Automotive Group. Building automation systems that manage $250K+ monthly ad spend across 52+ accounts. MBA, Google Certified.</p>
+                    <a href="/" style="font-size: 0.875rem; color: var(--primary); font-weight: 600; border-bottom: 2px solid var(--primary);">View Portfolio &rarr;</a>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer style="text-align: center; padding: 3rem 2rem; margin-top: 6rem; border-top: var(--border); color: var(--mid);">

@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winslow Young // AI & Digital Strategy</title>
     <meta name="description" content="Director of AI & Digital Strategy specializing in automation systems managing $250K+ monthly ad spend. 15 years of automotive marketing expertise.">
+    <link rel="canonical" href="https://winslowyoung.com/" />
+    <meta property="og:title" content="Winslow Young // AI & Digital Strategy">
+    <meta property="og:description" content="Director of AI & Digital Strategy specializing in automation systems managing $250K+ monthly ad spend. 15 years of automotive marketing expertise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://winslowyoung.com/">
+    <meta property="og:image" content="https://winslowyoung.com/hero-headshot.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Winslow Young // AI & Digital Strategy">
+    <meta name="twitter:description" content="Director of AI & Digital Strategy specializing in automation systems managing $250K+ monthly ad spend.">
+    <meta name="twitter:image" content="https://winslowyoung.com/hero-headshot.png">
+
+    <!-- Hero image preload -->
+    <link rel="preload" as="image" href="hero-headshot.png" fetchpriority="high">
 
     <!-- Monospace Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,6 +33,25 @@
     <!-- FOUC prevention: apply theme before paint -->
     <script>
     (function(){var t=localStorage.getItem('theme');if(!t)t='dark';if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Winslow Young",
+        "jobTitle": "Director of AI & Digital Strategy",
+        "url": "https://winslowyoung.com",
+        "image": "https://winslowyoung.com/hero-headshot.png",
+        "description": "Director of AI & Digital Strategy specializing in automation systems managing $250K+ monthly ad spend across 52+ accounts.",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Young Automotive Group"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/winslowyoung/",
+            "https://github.com/winyoung86-rgb"
+        ]
+    }
     </script>
 </head>
 <body>
@@ -101,7 +133,10 @@
                 <!-- [1.1] Mouse-follow glow effect -->
                 <div class="hero-glow"></div>
                 <div class="hero-image-border"></div>
-                <img src="hero-headshot.png" alt="Winslow Young" class="hero-image">
+                <picture>
+                    <source srcset="hero-headshot.webp" type="image/webp">
+                    <img src="hero-headshot.png" alt="Winslow Young — Director of AI & Digital Strategy" class="hero-image" width="1523" height="1898">
+                </picture>
             </div>
         </div>
 
@@ -369,7 +404,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="anthropic-logo.png" alt="Anthropic API" style="width: 46px; height: 46px;">
+                        <img src="anthropic-logo.png" alt="Anthropic API" loading="lazy" style="width: 46px; height: 46px;">
                     </div>
                     <span class="skill-name">Anthropic API</span>
                     <span class="skill-level skill-level-expert">Expert</span>
@@ -401,7 +436,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="clawd_shadow.png" alt="Claude Code" style="width: 56px; height: 56px;">
+                        <img src="clawd_shadow.png" alt="Claude Code" loading="lazy" style="width: 56px; height: 56px;">
                     </div>
                     <span class="skill-name">Claude Code</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
@@ -425,7 +460,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="github-logo.png" alt="GitHub" class="dark-logo" style="width: 104px; height: 104px;">
+                        <img src="github-logo.png" alt="GitHub" class="dark-logo" loading="lazy" style="width: 104px; height: 104px;">
                     </div>
                     <span class="skill-name">GitHub</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
@@ -441,7 +476,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="Google-Analytics-Logo.png" alt="Google Analytics" style="width: 48px; height: 48px;">
+                        <img src="Google-Analytics-Logo.png" alt="Google Analytics" loading="lazy" style="width: 48px; height: 48px;">
                     </div>
                     <span class="skill-name">Google Analytics</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
@@ -465,7 +500,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="mcp_icon.png" alt="MCP Servers" style="width: 56px; height: 56px;">
+                        <img src="mcp_icon.png" alt="MCP Servers" loading="lazy" style="width: 56px; height: 56px;">
                     </div>
                     <span class="skill-name">MCP Servers</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
@@ -489,7 +524,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="openai-logo.png" alt="OpenAI API" class="dark-logo" style="width: 44px; height: 44px;">
+                        <img src="openai-logo.png" alt="OpenAI API" class="dark-logo" loading="lazy" style="width: 44px; height: 44px;">
                     </div>
                     <span class="skill-name">OpenAI API</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
@@ -497,7 +532,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="postgres-logo.png" alt="Postgres" style="width: 52px; height: 52px;">
+                        <img src="postgres-logo.png" alt="Postgres" loading="lazy" style="width: 52px; height: 52px;">
                     </div>
                     <span class="skill-name">Postgres</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
@@ -505,7 +540,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="supabase-logo.png" alt="Supabase" style="width: 48px; height: 48px;">
+                        <img src="supabase-logo.png" alt="Supabase" loading="lazy" style="width: 48px; height: 48px;">
                     </div>
                     <span class="skill-name">Supabase</span>
                     <span class="skill-level skill-level-advanced">Advanced</span>
@@ -527,14 +562,14 @@
                     <div class="cert-card">
                         <i class="fab fa-google cert-icon"></i>
                         <div class="cert-info">
-                            <span class="cert-name">Google Generative AI Leader</span>
+                            <a href="https://cloud.google.com/learn/certification" class="cert-name" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; text-underline-offset: 3px;">Google Generative AI Leader</a>
                             <span class="cert-badge">Certified</span>
                         </div>
                     </div>
                     <div class="cert-card">
                         <i class="fab fa-google cert-icon"></i>
                         <div class="cert-info">
-                            <span class="cert-name">Google Ads Certified</span>
+                            <a href="https://skillshop.google.com" class="cert-name" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; text-underline-offset: 3px;">Google Ads Certified</a>
                             <span class="cert-badge">Certified</span>
                         </div>
                     </div>
@@ -840,7 +875,13 @@
     <footer class="footer">
         <div class="footer-container">
             <span class="footer-logo">[WY]</span>
-            <p class="footer-copy">&copy; 2025 Winslow Young. All rights reserved.</p>
+            <div class="footer-links" style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1rem;">
+                <a href="https://www.linkedin.com/in/winslowyoung/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: var(--primary); font-size: 1.25rem; transition: color 0.2s;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/winyoung86-rgb" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style="color: var(--primary); font-size: 1.25rem; transition: color 0.2s;"><i class="fab fa-github"></i></a>
+                <a href="/privacy.html" style="color: var(--mid); font-size: 0.875rem; transition: color 0.2s;">Privacy</a>
+                <a href="/terms.html" style="color: var(--mid); font-size: 0.875rem; transition: color 0.2s;">Terms</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Winslow Young. All rights reserved.</p>
             <p class="footer-tagline">// Built with passion for AI automation and digital innovation</p>
         </div>
     </footer>
