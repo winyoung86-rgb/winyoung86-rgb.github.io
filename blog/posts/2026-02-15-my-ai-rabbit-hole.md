@@ -1,10 +1,14 @@
 ---
 layout: layout.html
 title: My AI Rabbit Hole
-date: 2026-02-25
+date: 2026-02-15
 description: Five months ago, my tech stack was Google Sheets and an API key. Now I'm building full backend systems. Here's how that happened.
 tags: posts
 ---
+
+<a href="/blog/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--mid); text-decoration: none; margin-bottom: 2rem; font-weight: 600; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--mid)'">
+  <i class="fas fa-arrow-left"></i> Back to Blog
+</a>
 
 <div class="post-header">
   <h1 class="blog-title">{{ title }}</h1>

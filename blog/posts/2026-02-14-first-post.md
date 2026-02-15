@@ -6,6 +6,10 @@ description: A quick intro and why I decided to start sharing what I'm learning 
 tags: posts
 ---
 
+<a href="/blog/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--mid); text-decoration: none; margin-bottom: 2rem; font-weight: 600; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--mid)'">
+  <i class="fas fa-arrow-left"></i> Back to Blog
+</a>
+
 <div class="post-header">
   <h1 class="blog-title">{{ title }}</h1>
   <div class="post-meta">

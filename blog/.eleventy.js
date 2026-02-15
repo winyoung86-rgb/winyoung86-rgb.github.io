@@ -1,19 +1,30 @@
-module.exports = function(eleventyConfig) {
-  // Date filter for posts
-  eleventyConfig.addFilter("dateDisplay", function(date) {
-    return new Date(date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+module.exports = function (eleventyConfig) {
+  // Date filter for posts (use UTC to prevent timezone offset issues)
+  eleventyConfig.addFilter("dateDisplay", function (date) {
+    return new Date(date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC",
     });
   });
+
+  // Posts collection sorted by date descending (newest first)
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("posts").sort((a, b) => {
+      return b.date - a.date;
+    });
+  });
+
+  // Copy parent styles.css to blog output
+  eleventyConfig.addPassthroughCopy({ "../styles.css": "styles.css" });
 
   return {
     dir: {
       input: ".",
       output: "_site",
-      includes: "_includes"
+      includes: "_includes",
     },
-    pathPrefix: "/blog/"
+    pathPrefix: "/blog/",
   };
 };
