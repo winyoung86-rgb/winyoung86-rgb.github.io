@@ -16,9 +16,6 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Copy parent styles.css to blog output
-  eleventyConfig.addPassthroughCopy({ "../styles.css": "styles.css" });
-
   return {
     dir: {
       input: ".",
